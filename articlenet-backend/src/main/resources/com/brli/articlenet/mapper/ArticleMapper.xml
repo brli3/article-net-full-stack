@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--mapper file must sit under the same directory structure as the main mapper-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.brli.articlenet.mapper.ArticleMapper">
+<!--    dynamic SQL-->
+    <select id="list" resultType="com.brli.articlenet.model.Article">
+        select * from article
+        <where>
+            <if test="categoryId!=null">
+                category_id=#{categoryId}
+            </if>
+            <if test="state!=null">
+                state=#{state}
+            </if>
+            and create_user=#{userId}
+        </where>
+    </select>
+</mapper>
