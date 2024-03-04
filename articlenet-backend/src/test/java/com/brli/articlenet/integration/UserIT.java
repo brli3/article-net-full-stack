@@ -1,10 +1,8 @@
 package com.brli.articlenet.integration;
 
-import com.brli.articlenet.constants.ValidationConstants;
 import com.brli.articlenet.dto.RegisterDTO;
 import com.brli.articlenet.model.Result;
 import com.brli.articlenet.utils.StringUtil;
-import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,7 +15,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(webEnvironment = RANDOM_PORT)
-public class UserIntegrationTest {
+public class UserIT {
     @Autowired
     private WebTestClient webTestClient;
 

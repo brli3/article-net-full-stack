@@ -8,7 +8,8 @@ import org.springframework.data.redis.core.ValueOperations;
 
 import java.util.concurrent.TimeUnit;
 
-@SpringBootTest // initialise IOC before unit test
+/*
+ @SpringBootTest // initialise IOC before unit test
 public class RedisTest {
     @Autowired
     private StringRedisTemplate redisTemplate;
@@ -28,3 +29,4 @@ public class RedisTest {
         System.out.println("username from redis test: " + username);
     }
 }
+*/

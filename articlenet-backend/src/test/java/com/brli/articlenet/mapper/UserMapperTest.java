@@ -3,12 +3,10 @@ package com.brli.articlenet.mapper;
 import com.brli.articlenet.utils.AbstractTestcontainer;
 import com.brli.articlenet.model.User;
 import com.brli.articlenet.utils.Md5Util;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.context.ApplicationContext;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.test.annotation.DirtiesContext;
 
@@ -22,13 +20,9 @@ import static org.junit.jupiter.api.Assertions.*;
 //to prevent Spring Boot from replacing the Testcontainers database with an embedded one.
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @DirtiesContext // needed for running multiple test classes
-class UserMapperTest extends AbstractTestcontainer  {
+class UserMapperTest extends AbstractTestcontainer {
     @Autowired
     UserMapper userMapper;
-
-    @BeforeEach
-    void setUp() {
-    }
 
     @Test
     void findByUsername() {

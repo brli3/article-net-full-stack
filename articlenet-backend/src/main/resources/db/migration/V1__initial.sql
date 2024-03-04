@@ -1,45 +1,40 @@
--- create database
-# drop database if exists article_net;
-#
-# create database article_net;
-
--- use database
-use article_net;
+-- DROP DATABASE IF EXISTS article_net;
+-- CREATE DATABASE article_net;
 
 -- user table
-create table user (
-                      id int unsigned primary key auto_increment comment 'ID',
-                      username varchar(20) not null unique comment 'username',
-                      password varchar(32)  comment 'password',
-                      nickname varchar(10)  default '' comment 'nickname',
-                      email varchar(128) default '' comment 'email',
-                      user_pic varchar(128) default '' comment 'avatar url',
-                      create_time datetime not null comment 'create time',
-                      update_time datetime not null comment 'update time'
-) comment 'user table';
+CREATE TABLE users (
+                        id SERIAL PRIMARY KEY,
+                        username VARCHAR(20) NOT NULL UNIQUE,
+                        password VARCHAR(32),
+                        nickname VARCHAR(10) DEFAULT '',
+                        email VARCHAR(128) DEFAULT '',
+                        user_pic VARCHAR(128) DEFAULT '',
+                        create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                        update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
 
 -- category table
-create table category(
-                         id int unsigned primary key auto_increment comment 'ID',
-                         category_name varchar(32) not null comment 'category name',
-                         category_alias varchar(32) not null comment 'alias',
-                         create_user int unsigned not null comment 'creator ID',
-                         create_time datetime not null comment 'create time',
-                         update_time datetime not null comment 'update time',
-                         constraint fk_category_user foreign key (create_user) references user(id) -- foreign key
+CREATE TABLE categories (
+                          id SERIAL PRIMARY KEY,
+                          category_name VARCHAR(32) NOT NULL,
+                          category_alias VARCHAR(32) NOT NULL,
+                          create_user INT NOT NULL,
+                          create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                          update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                          CONSTRAINT fk_category_user FOREIGN KEY (create_user) REFERENCES users (id)
 );
 
 -- article table
-create table article(
-                        id int unsigned primary key auto_increment comment 'ID',
-                        title varchar(32) not null comment 'article title',
-                        content varchar(10000) not null comment 'article content',
-                        cover_img varchar(128) not null  comment 'cover image url',
-                        state varchar(12) default 'draft' comment 'state: can only be [published] or [draft]',
-                        category_id int unsigned comment 'category ID',
-                        create_user int unsigned not null comment 'creator ID',
-                        create_time datetime not null comment 'create time',
-                        update_time datetime not null comment 'update time',
-                        constraint fk_article_category foreign key (category_id) references category(id),-- foreign key
-                        constraint fk_article_user foreign key (create_user) references user(id) -- foreign key
+CREATE TABLE articles (
+                         id SERIAL PRIMARY KEY,
+                         title VARCHAR(32) NOT NULL,
+                         content VARCHAR(10000) NOT NULL,
+                         cover_img VARCHAR(128) NOT NULL,
+                         state VARCHAR(12) DEFAULT 'draft',
+                         category_id INT,
+                         create_user INT NOT NULL,
+                         create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                         update_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                         CONSTRAINT fk_article_category FOREIGN KEY (category_id) REFERENCES categories (id),
+                         CONSTRAINT fk_article_user FOREIGN KEY (create_user) REFERENCES users (id)
 );

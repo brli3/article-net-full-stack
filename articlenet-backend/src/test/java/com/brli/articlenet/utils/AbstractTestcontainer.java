@@ -1,49 +1,63 @@
 package com.brli.articlenet.utils;
 
+import lombok.extern.slf4j.Slf4j;
 import org.flywaydb.core.Flyway;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
+import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
-import org.testcontainers.containers.MySQLContainer;
+import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
+import javax.sql.DataSource;
+
 @Testcontainers
+@Slf4j
 public abstract class AbstractTestcontainer {
 
     protected AbstractTestcontainer() {
-        System.out.println("Creating test containers");
+        log.info("AbstractTestContainer constructor called");
     }
 
     @Container
-    protected static final MySQLContainer<?> mysqlContainer =
-            new MySQLContainer<>("mysql:latest")
-                    .withDatabaseName("article_net")
-                    .withUsername("root")
-                    .withPassword("root");
+    protected static final PostgreSQLContainer<?> postgreSQLContainer =
+            new PostgreSQLContainer<>("postgres:latest")
+            .withDatabaseName("article_net")
+            .withUsername("brli3")
+            .withPassword("password");
 
-    @BeforeAll
-    static void beforeAll() {
-        String dataSource = mysqlContainer.getJdbcUrl();
-        String username = mysqlContainer.getUsername();
-        String password = mysqlContainer.getPassword();
+    static {
+        postgreSQLContainer.start();
+        log.info("DB container started ...");
+        migrateDatabase();
+        log.info("DB migrated ...");
+    }
+
+    private static void migrateDatabase() {
+        String dataSource = postgreSQLContainer.getJdbcUrl();
+        String username = postgreSQLContainer.getUsername();
+        String password = postgreSQLContainer.getPassword();
         Flyway flyway = Flyway.configure().dataSource(
-                dataSource, username,password
+                dataSource, username, password
         ).load();
         flyway.migrate();
     }
 
-    @AfterAll
-    static void afterAll() {
-        mysqlContainer.stop();
-    }
-
     @DynamicPropertySource
     private static void registerDataSourceProperties(DynamicPropertyRegistry registry) {
-        registry.add( "spring.datasource.url", mysqlContainer::getJdbcUrl );
-        registry.add( "spring.datasource.username", mysqlContainer::getUsername );
-        registry.add( "spring.datasource.password", mysqlContainer::getPassword );
+        System.out.println("Data source configured dynamically from container");
+        registry.add( "spring.datasource.url", postgreSQLContainer::getJdbcUrl );
+        registry.add( "spring.datasource.username", postgreSQLContainer::getUsername );
+        registry.add( "spring.datasource.password", postgreSQLContainer::getPassword );
+    }
+    private static DataSource getDataSource() {
+        return DataSourceBuilder.create()
+                .driverClassName(postgreSQLContainer.getDriverClassName())
+                .url(postgreSQLContainer.getJdbcUrl())
+                .username(postgreSQLContainer.getUsername())
+                .password(postgreSQLContainer.getPassword())
+                .build();
     }
 
 }
+

@@ -6,12 +6,17 @@
 <mapper namespace="com.brli.articlenet.mapper.ArticleMapper">
 <!--    dynamic SQL-->
     <select id="list" resultType="com.brli.articlenet.model.Article">
-        select * from article
+        select * from articles
         <where>
-            <if test="categoryId!=null">
+            <if test="categoryId!=null and state==null">
                 category_id=#{categoryId}
             </if>
-            <if test="state!=null">
+            <if test="categoryId==null and state!=null">
+                state=#{state}
+            </if>
+            <if test="categoryId!=null and state!=null">
+                category_id=#{categoryId}
+                 and
                 state=#{state}
             </if>
             and create_user=#{userId}

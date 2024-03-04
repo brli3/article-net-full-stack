@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16.4
+    container_name: postgres
+    ports:
+      - "15432:5432"
+    environment:
+      POSTGRES_DB: article_net # initiate database
+      POSTGRES_USER: brli3
+      POSTGRES_PASSWORD: password
+    volumes:
+      - db:/data/postgres
+    networks:
+      - nw
+    restart: unless-stopped
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    restart: unless-stopped
+    ports:
+      - "16379:6379"
+    networks:
+      - nw
+
+  articlenet-api:
+    image: brli3/articlenet-api
+    container_name: articlenet-api
+    environment:
+      SERVER_PORT: 8080 # overwrite port
+      # use service name as host
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/article_net
+      SPRING.DATA.REDIS.PORT: 6379
+      SPRING.DATA.REDIS.HOST: redis # service name
+    ports:
+      - "18080:8080" # host:container
+    networks:
+      - nw
+    #restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+
+volumes:
+  db:
+
+networks:
+  nw:
+    driver: bridge

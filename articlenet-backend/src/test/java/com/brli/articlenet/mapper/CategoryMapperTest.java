@@ -21,10 +21,6 @@ class CategoryMapperTest extends AbstractTestcontainer {
     @Autowired
     private CategoryMapper categoryMapper;
 
-    @BeforeEach
-    void setUp() {
-    }
-
     @Test
     void add() {
         Category category = new Category();

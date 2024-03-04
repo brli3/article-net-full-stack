@@ -4,16 +4,17 @@ server:
 
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:4306/article_net?createDatabaseIfNotExist=true
-    username: root
-    password: root
+    url: jdbc:postgresql://localhost:15432/article_net
+    username: brli3
+    password: password
   data:
     redis:
-      port: 7379
-      host: 127.0.0.1
+      port: 16379
+      host: localhost
 
 logging:
   level:
     web: debug
     sql: debug
+    org:
+      mybatis: debug

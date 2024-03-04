@@ -23,10 +23,5 @@ build/
 
 # Dependencies
 /.idea/libraries
-*.ipr
-*.iws
-*.iml
-.idea_modules/
-*.log
 *.swp
 *~
