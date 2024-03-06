@@ -5,70 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ba1791c-a454-40fe-ad33-9a4ee4a4e473" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/Dockerrun.aws.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/articlenet.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/ArticleNetApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/annotation/State.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/config/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/constants/ValidationConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/controller/ArticleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/controller/CategoryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/controller/FileUploadController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/controller/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/dto/LoginDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/dto/RegisterDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/exception/DuplicateResourceException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/exception/GlobalExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/exception/ResourceNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/interceptor/LoginInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/mapper/ArticleMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/mapper/CategoryMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/model/Article.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/model/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/model/PageBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/model/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/service/ArticleService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/service/CategoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/service/impl/ArticleServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/service/impl/CategoryServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/service/impl/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/utils/JwtUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/utils/Md5Util.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/utils/StringUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/utils/ThreadLocalUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/java/com/brli/articlenet/validation/StateValidation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/resources/application-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/resources/com/brli/articlenet/mapper/ArticleMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/resources/db/migration/V1__initial.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/main/resources/db/migration/V2__insert_data.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/test/java/com/brli/articlenet/integration/UserIT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/test/java/com/brli/articlenet/mapper/CategoryMapperTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/test/java/com/brli/articlenet/mapper/UserMapperTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/test/java/com/brli/articlenet/service/impl/UserServiceImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/test/java/com/brli/articlenet/utils/AbstractTestcontainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/test/java/com/brli/articlenet/utils/JwtUtilTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/test/java/com/brli/articlenet/utils/Md5UtilTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/test/java/com/brli/articlenet/utils/RedisTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/test/java/com/brli/articlenet/utils/StringUtilTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/test/java/com/brli/articlenet/utils/TestcontainerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/articlenet-backend/src/test/java/com/brli/articlenet/utils/ThreadLocalTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,35 +29,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "21",
-    "last_opened_file_path": "/Users/brandon/Dev/2024/IdeaProjects/article-net",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/brandon/Dev/2024/IdeaProjects/article-net&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/articlenet-backend" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.Main">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="ArticleNet" />
       <method v="2">
@@ -129,6 +78,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="articlenet-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.brli.articlenet.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -144,6 +119,7 @@
       <workItem from="1708274629788" duration="18000" />
       <workItem from="1708274667065" duration="3000" />
       <workItem from="1709759348736" duration="148000" />
+      <workItem from="1709760071811" duration="394000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,20 @@
+# AWS environment
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://awseb-e-t7nk7ztm98-stack-awsebrdsdatabase-kk43iraw6kre.c7i6keuoybve.eu-west-1.rds.amazonaws.com:5432/article_net?createDatabaseIfNotExist=true
+    username: brli3
+    password: password
+  data:
+    redis:
+      port: 6379
+      host: articlenet-api-redis-cluster.ajjdby.ng.0001.euw1.cache.amazonaws.com
+
+logging:
+  level:
+    web: debug
+    sql: debug
+    org:
+      mybatis: debug

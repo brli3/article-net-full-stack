@@ -1,0 +1,35 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "articlenet-api",
+      "image": "brli3/articlenet-api:latest",
+      "essential": true,
+      "memory": 512,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8080
+        }
+      ],
+      "environment": [
+        {
+          "name": "SPRING_PROFILES_ACTIVE",
+          "value": "aws"
+        },
+        {
+          "name": "SPRING_DATASOURCE_URL",
+          "value": "jdbc:postgresql://awseb-e-t7nk7ztm98-stack-awsebrdsdatabase-kk43iraw6kre.c7i6keuoybve.eu-west-1.rds.amazonaws.com:5432/article_net?createDatabaseIfNotExist=true"
+        },
+        {
+          "name": "SPRING_DATA_REDIS_PORT",
+          "value": "6379"
+        },
+        {
+          "name": "SPRING_DATA_REDIS_HOST",
+          "values": "articlenet-api-redis-cluster.ajjdby.ng.0001.euw1.cache.amazonaws.com"
+        }
+      ]
+    }
+  ]
+}

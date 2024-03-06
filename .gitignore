@@ -1,27 +1,5 @@
-# IntelliJ IDEA
+*/target/
+*/.idea/
 .idea/
-.DS_Store
-
-# Compiled files
-*.class
-*.jar
-*.war
-*.ear
-*.ipr
-*.iws
-*.iml
-*.log
-*.bak
-
-# Maven
-target/
-.idea_modules/
-
-# Gradle
-build/
-.gradle/
-
-# Dependencies
-/.idea/libraries
-*.swp
-*~
+*/node_modules
+*/.DS_store
