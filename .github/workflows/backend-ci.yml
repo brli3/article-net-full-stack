@@ -1,0 +1,26 @@
+name: CI - Build Backend
+
+on:
+  pull_request:
+    branches:
+      - "main"
+    paths:
+      - backend/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16.2
+        env:
+          POSTGRES_USER: brli3
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: article_net
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 15432:5432
