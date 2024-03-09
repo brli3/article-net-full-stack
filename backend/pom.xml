@@ -16,6 +16,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <docker.username>brli3</docker.username>
+        <docker.image.name>articlenet-api</docker.image.name>
+        <docker.image.tag/>
     </properties>
 
     <dependencies>
@@ -191,7 +193,8 @@
                         </platforms>
                     </from>
                     <to>
-                        <image>docker.io/${docker.username}/${project.artifactId}:${project.version}</image>
+<!--                        docker.io/brli3/articlenet-api:date-->
+                        <image>docker.io/${docker.username}/${docker.image.name}:${docker.image.tag}</image>
                         <tags>
                             <tag>latest</tag>
                         </tags>

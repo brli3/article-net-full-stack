@@ -22,7 +22,7 @@ public class HelloController {
 
     @GetMapping
     public Result<String> hello() {
-        return Result.success("Hello " + count++);
+        return Result.success("Hello visited " + count++ + " times");
     }
 
     @GetMapping("/redis-status")
