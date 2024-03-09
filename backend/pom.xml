@@ -17,6 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <docker.username>brli3</docker.username>
         <docker.image.name>articlenet-api</docker.image.name>
+<!--        assign from GitHub action-->
         <docker.image.tag/>
     </properties>
 
