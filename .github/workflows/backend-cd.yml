@@ -43,12 +43,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Set build number
         id: build-number
-#        build a docker image with a unique image tage using the current date and time
         run: echo "BUILD_NUMBER=$(date '+%d.%m.%Y.%H.%M.%S')" >> $GITHUB_OUTPUT
-#      - name: Build Docker image with Jib
-#        run: mvn -ntp -B verify -Ddocker.image.tag=${{ steps.build-number.outputs.BUILD_NUMBER }} jib:build
-#      - name: Build Docker image with Jib
-#        run: mvn -ntp -B verify -Ddocker.image.tag=${{ github.sha }} jib:build
       - name: Update Dockerrun.aws.json api image tag with new build number
         run: |
           echo "Dockerrun.aws.json before updating tag"
