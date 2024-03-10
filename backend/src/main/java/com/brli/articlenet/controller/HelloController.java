@@ -15,14 +15,14 @@ import java.net.http.HttpResponse;
 @RestController()
 @RequestMapping("/hello")
 public class HelloController {
-    private static int count = 1;
+    private static int count = 0;
 
     @Autowired
     private StringRedisTemplate redisTemplate;
 
     @GetMapping
     public Result<String> hello() {
-        return Result.success("Hello visited " + count++ + " times");
+        return Result.success("Hello page visited %s times ".formatted(++count));
     }
 
     @GetMapping("/redis-status")

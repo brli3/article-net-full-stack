@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "articlenet-api",
-      "image": "brli3/articlenet-api:09.03.2024.23.23.27",
+      "image": "brli3/articlenet-api:latest",
       "essential": true,
       "memory": 512,
       "portMappings": [
@@ -19,7 +19,7 @@
         },
         {
           "name": "SPRING_DATASOURCE_URL",
-          "value": "jdbc:postgresql://awseb-e-t7nk7ztm98-stack-awsebrdsdatabase-kk43iraw6kre.c7i6keuoybve.eu-west-1.rds.amazonaws.com:5432/article_net?createDatabaseIfNotExist=true"
+          "value": "jdbc:postgresql://awseb-e-s8hpd8bc77-stack-awsebrdsdatabase-purl6zbengwj.c7i6keuoybve.eu-west-1.rds.amazonaws.com:5432/article_net?createDatabaseIfNotExist=true"
         },
         {
           "name": "SPRING_DATA_REDIS_PORT",
