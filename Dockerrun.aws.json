@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "articlenet-api",
-      "image": "brli3/articlenet-api:latest",
+      "image": "brli3/articlenet-api:09.03.2024.23.23.27",
       "essential": true,
       "memory": 512,
       "portMappings": [
